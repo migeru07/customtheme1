@@ -1,0 +1,243 @@
+/* Slider Principal */
+
+.slides {
+	position: relative;
+}
+
+.slides li {
+	padding: 100px 0;
+}
+li.slider1 {
+	background: #e94238;
+}
+li.slider2 {
+	background: #0e96dd;
+}
+.informacion-slider{
+	text-transform: uppercase;
+}
+h3.titulo {
+	font-weight: bold;
+	font-size: 24px;
+	color: #fff;
+}
+p.descripcion{
+	font-size: 18px;
+	color: #701c16;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+	margin: 20px 0;
+}
+a.btn-slider {
+	color: #fff;
+	padding:  12px;
+	background: rgba(0, 0, 0, 0.5);
+	display: inline-block;
+}
+.imagen-slider {
+	height: 250px;
+	position: relative;
+}
+.imagen-slider img {
+	margin:  0 auto;
+	display: table;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* Cuerpo */
+section.bienvenida {
+    background: #1a2128;
+    padding: 30px 0;
+}
+h4.titulo-bienvenida {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+p.mensaje-bienvenida {
+    color: #687078;
+    width: 35%;
+    margin: 0 auto;
+}
+.cuerpo-home {
+    padding: 40px 0;
+}
+h5.titulo-articulo {
+    color: #3c1c22;
+}
+hr {
+    height: 1px;
+    background: #a2a2a2;
+}
+header h3 a {
+    font-weight: 700;
+    font-size: 18px;
+}
+ul.info {
+    margin: 20px 0;
+    padding: 0;
+}
+ul.info li {
+    display: inline-block;
+    margin-right: 10px;
+}
+ul.info li a {
+    color: red;
+}
+a.post-link {
+    text-decoration: underline;
+}
+.presentacion-proyecto {
+    background: #d0d0d0;
+    padding: 20px;
+}
+.presentacion-proyecto img {
+    width: 60%;
+    margin-bottom: 20px;
+}
+.presentacion-proyecto p {
+    color: #1a2128;
+}
+a.ver-proyectos {
+    background: #1a2128;
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    position:  relative;
+    top: 35px;
+}
+/* Footer */
+footer.pie-pagina {
+    background: #d3d3d3;
+    padding: 45px 0;
+    border-top: 25px solid #000;
+    margin-top: 30px;
+}
+.iconos-redes li {
+    display: inline-block;
+    margin: 0px 5px;
+}
+ul.iconos-redes a {
+    background: #8a8787;
+    color: #d3d3d3;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 30px;
+    font-size: 27px;
+}
+ul.iconos-redes a:hover{
+	background: #fff;
+}
+ul {
+	padding-left: 0;
+}
+li {
+	list-style: none;
+}
+/* Portafolio */
+h3.subtitulo {
+	color: #e54d42;
+	font-weight: bold;
+	font-size: 19px;
+}
+.portafolio-header {
+    margin: 1.5em 0;
+}
+.portafolio-header li {
+    display: inline-block;
+    margin: 10px;
+}
+.portafolio-header li a {
+    color: #6e6e6e;
+}
+a.active {
+    font-weight: bold;
+    color: #111;
+    text-decoration: underline;
+}
+.borde {
+	border: 1px solid #dcdcdc;
+	padding: 5px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+}
+.portafolio-entrada {
+	margin-bottom: 20px;
+}
+.portafolio-entrada .estado-hover {
+	padding: 5em 0;
+	position: absolute;
+	width: 90%;
+	display: none;
+}
+.portafolio-entrada:hover .estado-hover {
+	display: block;
+}
+.portafolio-entrada:hover img {
+	opacity: 0.3;
+	transition: opacity 0.2s ease-out;
+}
+.estado-hover h4 {
+	color: #e54d42;
+	font-weight: bold;
+}
+.escondidas {
+	opacity: 0.1;
+	transition: opacity 0.3s ease-in;
+}
+p {
+	margin: 20px 0;
+}
+/* Estilos acerca de */
+.mifoto {
+    border: 15px solid #dedede;
+    width: 236px;
+}
+p.text-success2 {
+    color: #a6c63a;
+}
+blockquote.testimonios p, blockquote.testimonios footer {
+    font-size: 15px;
+    padding: 0 30px;
+}
+img.comilla {
+    position: absolute;
+    float: left;
+    top: 30px;
+}
+/* Blog */
+div.row.post-bloque {
+    margin-bottom: 30px;
+}
+p.metadatos a {
+    color: red;
+}
+p.leermas a {
+    color: #54ad43;
+    text-decoration: underline;
+}
+section.blog h3 + .post-bloque {
+    margin-top: 30px;
+}
+/* Estilos Contacto */
+form.contacto input.form-control, form.contacto textarea.form-control {
+    background: #DDDDDD;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+a.correo {
+    color: #009036;
+}
+p.contact-adicional {
+    font-size: 14px;
+}
+div.mapa {
+    border: 15px solid #dddddd;
+    border-radius: 10px;
+    margin: 15px 0;
+}
