@@ -19,8 +19,19 @@ function wmt_theme_js () {
 
 add_action( 'wp_enqueue_scripts', 'wmt_theme_js' );
 
+/* Menus */
 
-//add_theme_support('menu');
+//add_theme_support('menus');
+
+function register_mis_menus() {
+	register_nav_menu( 'menu-principal' , __('Menu Principal')	);
+	
+}
+add_action( 'init', 'register_mis_menus' );
+
+/* Thumbnails */
+
+add_theme_support( 'post-thumbnails' );
 
 
 ?> 

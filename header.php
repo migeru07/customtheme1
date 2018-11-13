@@ -3,7 +3,7 @@
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php wp_title('|', true,'right'); ?></title>
+    <title><?php wp_title('|', true,'right'); bloginfo('name'); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
 
@@ -21,7 +21,9 @@
         <!-- logotipo -->
         <div class="row">
           <div class="logo">
-            <img src="<?php bloginfo( 'template_directory' );?>/imagenes/logo.png" class="center-block">
+            <a href="<?php echo home_url(); ?>">
+              <img src="<?php bloginfo( 'template_directory' );?>/imagenes/logo.png" class="center-block">
+            </a>
           </div>
         </div>
         <!-- Menu -->
@@ -39,13 +41,15 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Inicio</a></li>
-                <li><a href="portafolio.html">Portafolio</a></li>
-                <li><a href="acerca.html">Acerca de</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contacto.html">Contact</a></li>
-              </ul>
+                <?php
+                $defaults = array(
+                  'theme_location'  => 'menu-principal',
+                  'container'       => 'ul',
+                  'menu_class'      => 'nav navbar-nav'
+                );
+                wp_nav_menu( $defaults );
+
+                ?>
              </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>

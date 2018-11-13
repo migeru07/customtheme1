@@ -196,6 +196,7 @@ p {
 .mifoto {
     border: 15px solid #dedede;
     width: 236px;
+    height: 236px;
 }
 p.text-success2 {
     color: #a6c63a;
