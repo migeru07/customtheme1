@@ -19,13 +19,17 @@ function wmt_theme_js () {
 
 add_action( 'wp_enqueue_scripts', 'wmt_theme_js' );
 
-/* Menus */
+/* Menus */ 
 
 //add_theme_support('menus');
 
 function register_mis_menus() {
-	register_nav_menu( 'menu-principal' , __('Menu Principal')	);
-	
+	register_nav_menus( 
+		array(
+			'menu-principal' => __('Menu Principal'),
+			'portafolio-menu' => __('Menu Portafolio')
+		)
+	);
 }
 add_action( 'init', 'register_mis_menus' );
 
@@ -33,5 +37,33 @@ add_action( 'init', 'register_mis_menus' );
 
 add_theme_support( 'post-thumbnails' );
 
+/*********************/
+/* Post portafolio */
 
-?> 
+function wordpress_init_portafolio() {
+  register_post_type( 'portafolio',
+    array(
+      'labels' => array(
+        'name' => __( 'Portafolio' ),
+        'singular_name' => __( 'Trabajo' )
+      ),
+      'public' => true,
+      'has_archive' => true, 
+	  'supports' => array (	//Agregamos los soportes.
+	 	 'title', 'editor', 'thumbnail'
+	),
+	  'rewrite' => array('slug' => 'portafolio')
+    )
+  );
+	register_taxonomy( 'clasificacion', array('portafolio'), array(
+		'hierarchical' => true,
+		'labels' => $labels, 
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => array('slug' => 'clasificacion-portafolio')
+	));
+}
+add_action( 'init', 'wordpress_init_portafolio' );
+
+
+ 

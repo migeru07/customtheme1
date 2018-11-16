@@ -1,3 +1,11 @@
+a, a:link, a:visited {
+    text-decoration: none;
+}
+
+li.current_page_item a:link, li.current_page_item a:visited {
+    color:  #a4281f;
+}
+
 /* Slider Principal */
 
 .slides {
@@ -242,3 +250,4 @@ div.mapa {
     border-radius: 10px;
     margin: 15px 0;
 }
+
