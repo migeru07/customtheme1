@@ -72,6 +72,10 @@ p.mensaje-bienvenida {
 .cuerpo-home {
     padding: 40px 0;
 }
+.titulo-post h3 a {
+    text-transform: uppercase;
+}
+
 h5.titulo-articulo {
     color: #3c1c22;
 }
