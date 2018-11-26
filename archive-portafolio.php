@@ -36,7 +36,7 @@
               		<?php 
 			            if(has_post_thumbnail() ) {
 			                the_post_thumbnail('large', array(
-			                  'class' => 'img-responsive text-center'));
+			                  'class' => 'img-responsive text-center img-portafolio'));
 			            }
 			         ?>
               </a>

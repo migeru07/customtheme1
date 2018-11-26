@@ -84,6 +84,39 @@ function wordpress_init_portafolio() {
 add_action( 'init', 'wordpress_init_portafolio' );
 
 /*****************************/
+/* Customizer Options        */
+
+function the_welcome_frontpage($wp_customize) {
+	$wp_customize->add_section('the_welcome_section', array(
+		'title' => 'Mensaje Bienvenida'
+	));
+
+	$wp_customize->add_setting('the-welcome-title', array(
+		'default' => 'Example title'
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'the-welcome-title-control', array(
+		'label' => 'Titulo',
+		'section' => 'the_welcome_section',
+		'settings' => 'the-welcome-title'
+	)));
+
+	$wp_customize->add_setting('the-welcome-paragraph', array(
+		'default' => 'Example paragraph'
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'the-welcome-paragraph-control', array(
+		'label' => 'Parrafo',
+		'section' => 'the_welcome_section',
+		'settings' => 'the-welcome-paragraph',
+		'type' => 'textarea'
+	)));
+}
+
+add_action('customize_register', 'the_welcome_frontpage');
+
+
+/*****************************/
 /* Post Testimonios y Slider */
 
 function cptui_register_my_cpts() {

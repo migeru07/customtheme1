@@ -6,13 +6,14 @@
     
     <section class="bienvenida">
       <div class="container text-center">
-        <h4 class="titulo-bienvenida"><?php the_field('titulo_intro'); ?></h4>
-        <p class="mensaje-bienvenida"><?php the_field('texto_intro'); ?></p>
+        <h4 class="titulo-bienvenida"><?php echo get_theme_mod('the-welcome-title'); ?></h4>
+        <p class="mensaje-bienvenida"><?php echo get_theme_mod('the-welcome-paragraph'); ?></p>
       </div>
     </section>
     <!-- Cuerpo Home -->
     <section class="container cuerpo-home">
       <div class="row clearfix">
+
         <!-- Post Reciente -->
         <div class="col-md-6">
           <article class="articulo-home">
@@ -41,16 +42,12 @@
               <?php echo get_excerpt(300); ?>
               <p><a href="<?php the_permalink(); ?>" class="post-link">Leer más.</a></p>
         
-            <?php endwhile; ?>
-            <?php else : ?>
-              <h2 class="center">Not Found</h2>
-              <p class="center">
-            <?php _e("No se encontró ningunga información."); ?></p>
-            <?php endif; wp_reset_postdata();  ?>
-
-
-
-           
+              <?php endwhile; ?>
+              <?php else : ?>
+                <h2 class="center">Not Found</h2>
+                <p class="center">
+              <?php _e("No se encontró ningunga información."); ?></p>
+              <?php endif; wp_reset_postdata();  ?>
             </div>
           </article>
         </div>

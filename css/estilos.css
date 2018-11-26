@@ -175,7 +175,12 @@ a.active {
 .borde {
 	border: 1px solid #dcdcdc;
 	padding: 5px;
-	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);  
+    height: 235px
+}
+.img-portafolio {
+    object-fit: fill;
+    height: 220px;
 }
 .portafolio-entrada {
 	margin-bottom: 20px;
